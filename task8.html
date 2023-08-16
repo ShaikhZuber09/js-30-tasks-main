@@ -43,10 +43,10 @@
 		const onCapitalize=()=>{
 			const inputCap=document.getElementById("inputCap").value
 			let capitalizeVal=inputCap.split(" ").reduce((accu,cv)=>{
-                    cv[0]=cv[0].toUpperCase()
-					accu.push(cv)
+                    cv=cv.charAt(0).toUpperCase() + cv.slice(1)
+				accu +=cv + " "
 					return accu
-	                                 },[]).join(" ")
+	                                 },"")
 			alert(capitalizeVal)
 		}
 	</script>

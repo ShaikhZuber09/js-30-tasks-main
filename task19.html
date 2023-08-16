@@ -1,12 +1,19 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<title>JS Task 19</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
+	<style>
+		#para p{
+			font-size: 16px;
+		}
+	</style>
 </head>
 <body>
 	<div class="container" id="task19">
@@ -25,17 +32,40 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<form class="form-inline">
-					<button type="button" class="btn btn-primary btn-lg mr-3 decrease">-</button>
-					<button type="button" class="btn btn-primary btn-lg increase">+</button>
+					<button type="button" class="btn btn-primary btn-lg mr-3 decrease" onclick="onChange(this)" value="16">-</button>
+					<button type="button" class="btn btn-primary btn-lg increase" onclick="onChange(this)" value="16">+</button>
 				</form>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6" id="para">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat nulla ut nunc ornare, vitae gravida ex interdum. Aenean est sapien, tristique eget dictum auctor, dignissim sit amet velit. Nullam ac erat in risus rhoncus facilisis et sit amet augue. Ut dui diam, egestas sit amet molestie eget, pretium vitae ligula. Mauris feugiat justo dictum eros pharetra, et gravida quam egestas. Nulla sagittis sapien erat, non gravida ante ornare nec. Nullam auctor ipsum ut condimentum suscipit. Praesent et sapien et nisl congue vestibulum. Vivamus lacinia sed nunc id tempor.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur  elit. Etiam consequat nulla ut nunc ornare, vitae gravida ex interdum. Aenean est sapien, tristique eget dictum auctor, dignissim sit amet velit. Nullam ac erat in risus rhoncus facilisis et sit amet augue. Ut dui diam, egestas sit amet molestie eget, pretium vitae ligula. Mauris feugiat justo dictum eros pharetra, et gravida quam egestas. Nulla sagittis sapien erat, non gravida ante ornare nec. Nullam auctor ipsum ut condimentum suscipit. Praesent et sapien et nisl congue vestibulum. Vivamus lacinia sed nunc id tempor.</p>
 			</div>
 		</div>
 	</div>
-	<script src="js/task19_app.js"></script>
+	<!-- <script src="js/task19_app.js"></script> -->
+	<script>
+		let para=[...document.getElementById("para").children]
+		let btns=[...document.querySelectorAll(".btn")]
+
+		const onChange=(ele)=>{
+			let value=parseInt(ele.getAttribute("value"))
+			let classes=ele.className
+
+			if(classes.includes("increase")){
+				value=value+1
+			}else{
+				value=value-1
+			}
+			
+			btns.forEach(el => {
+				el.setAttribute("value",`${value}`)
+			});
+			para[0].style.fontSize=`${value}px`
+
+		}
+
+
+	</script>
 </body>
 </html>

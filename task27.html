@@ -1,6 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<title>JS Task 27</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -24,6 +26,17 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/task27_app.js"></script>
+	<!-- <script src="js/task27_app.js"></script> -->
+	<script>
+		let states = ['Aasam', 'Bihar', 'Maharashtra', 'Gujrat', 'Andra Pradesh'];
+
+		const iterate=(arr)=>{
+			for (let i = 0; i < arr.length; i++) {
+				console.log(`${arr[i]} is indian state`);	
+			}
+		}
+
+		iterate(states);
+	</script>
 </body>
 </html>

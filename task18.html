@@ -1,6 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<title>JS Task 18</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -28,11 +30,18 @@
 					<div class="form-group mr-sm-3">
 						<input type="text" class="form-control" placeholder="Number" id="inputNum">
 					</div>
-					<button type="button" class="btn btn-primary" id="btn">Check Range</button>
+					<button type="button" class="btn btn-primary" id="btn" onclick="onCheckRange()">Check Range</button>
 				</form>
 			</div>
 		</div>
 	</div>
-	<script src="js/task18_app.js"></script>
+	<!-- <script src="js/task18_app.js"></script>-->
+	<script>
+		const inputNum=document.getElementById("inputNum")
+
+		const onCheckRange=()=>{
+		(inputNum.value > 50 && inputNum.value < 100)?alert(`Value is between 50-100`):alert(`Value is not between 50-100`)
+		}
+	</script>
 </body>
 </html>

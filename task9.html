@@ -31,9 +31,13 @@
 
 	<script>
 		let date1=new Date("8-8-2022")
-		let yr1=date1.getFullYear()
+		
 		let date2=new Date("5-24-2023")
-		console.log(date1,date2,yr1)
+		
+		let diffInTime=date2.getTime() - date1.getTime()
+		let noOfDay=diffInTime / (1000*60*60*24)
+
+		alert(`Number of days betwwen ${date2} and ${date1} is ${noOfDay}`)
 	</script>
 </body>
 </html>

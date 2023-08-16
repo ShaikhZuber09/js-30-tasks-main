@@ -1,6 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<title>JS Task 14</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -25,11 +27,21 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<form class="form-inline">
-					<button type="button" class="btn btn-primary btn-lg">Show sum</button>
+					<button type="button" class="btn btn-primary btn-lg" onclick="onShowNum()">Show sum</button>
 				</form>
 			</div>
 		</div>
 	</div>
-	<script src="js/task14_app.js"></script>
+	<!-- <script src="js/task14_app.js"></script> -->
+
+	<script>
+const sum=(num1,num2)=>{
+	return num1 + num2;
+}
+
+const onShowNum=()=>{
+	alert(`Sum of "5" and "6" is ${sum(5,6)}`)
+}
+	</script>
 </body>
 </html>
